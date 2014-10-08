@@ -39,6 +39,10 @@
     "npm run-script",
     "filewatcher"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wilmoore/rerun-script"
+  },
   "author": "Wil Moore III <wil.moore@wilmoore.com>",
   "license": "MIT",
   "dependencies": {
