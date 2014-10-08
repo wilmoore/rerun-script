@@ -1,0 +1,45 @@
+{
+  "name": "watch-and-run",
+  "version": "0.0.1",
+  "description": "Via package.json, configure glob patterns to watch and invoke an `npm run` script on change.",
+  "main": "index.js",
+  "bin": {
+    "watch-and-run": "bin/cli.js"
+  },
+  "scripts": {
+    "test": "tape test.js | faucet"
+  },
+  "watches": [
+    {
+      "script": "test",
+      "patterns": [
+        "*.js",
+        "lib/**/*.js",
+        "test/**/*.js"
+      ]
+    },
+    {
+      "script": "lint",
+      "patterns": [
+        "*.js",
+        "lib/**/*.js",
+        "test/**/*.js"
+      ]
+    }
+  ],
+  "keywords": ["glob", "watch", "run command", "command", "run", "re-execute", "run-script", "npm run", "npm run-script", "filewatcher"],
+  "author": "Wil Moore III <wil.moore@wilmoore.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^0.5.1",
+    "commander": "^2.3.0",
+    "debug": "^2.0.0",
+    "program-version": "^0.1.1",
+    "shelljs": "^0.3.0",
+    "watch-glob": "^0.1.3"
+  },
+  "devDependencies": {
+    "faucet": "0.0.1",
+    "tape": "^3.0.0"
+  }
+}
