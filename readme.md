@@ -1,4 +1,6 @@
-# watch-and-run [![Build Status](http://img.shields.io/travis/wilmoore/watch-and-run.svg)](https://travis-ci.org/wilmoore/watch-and-run) [![NPM version](http://img.shields.io/npm/v/watch-and-run.svg)](https://www.npmjs.org/package/watch-and-run) [![NPM downloads](http://img.shields.io/npm/dm/watch-and-run.svg)](https://www.npmjs.org/package/watch-and-run) [![LICENSE](http://img.shields.io/npm/l/watch-and-run.svg)](LICENSE)
+# watch-and-run
+
+[![Build Status](http://img.shields.io/travis/wilmoore/watch-and-run.svg)](https://travis-ci.org/wilmoore/watch-and-run) [![NPM version](http://img.shields.io/npm/v/watch-and-run.svg)](https://www.npmjs.org/package/watch-and-run) [![NPM downloads](http://img.shields.io/npm/dm/watch-and-run.svg)](https://www.npmjs.org/package/watch-and-run) [![LICENSE](http://img.shields.io/npm/l/watch-and-run.svg)](LICENSE)
 
 > Via package.json, configure glob patterns to watch and invoke an `npm run` script on change.
 
