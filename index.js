@@ -16,7 +16,7 @@ module.exports = getWatches;
  */
 
 function getWatches(directory) {
-  var package_path = resolve(directory || '../..');
+  var package_path = resolve(directory || './');
   var pkg = read(package_path);
   var watches = extract(pkg);
   return Array.isArray(watches) ? watches : [];
