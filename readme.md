@@ -1,18 +1,31 @@
-# watch-and-run
+# rerun-script
 
-[![Build Status](http://img.shields.io/travis/wilmoore/watch-and-run.svg)](https://travis-ci.org/wilmoore/watch-and-run) [![NPM version](http://img.shields.io/npm/v/watch-and-run.svg)](https://www.npmjs.org/package/watch-and-run) [![NPM downloads](http://img.shields.io/npm/dm/watch-and-run.svg)](https://www.npmjs.org/package/watch-and-run) [![LICENSE](http://img.shields.io/npm/l/watch-and-run.svg)](LICENSE)
+[![Build Status](http://img.shields.io/travis/wilmoore/rerun-script.svg)](https://travis-ci.org/wilmoore/rerun-script) [![NPM version](http://img.shields.io/npm/v/rerun-script.svg)](https://www.npmjs.org/package/rerun-script) [![NPM downloads](http://img.shields.io/npm/dm/rerun-script.svg)](https://www.npmjs.org/package/rerun-script) [![LICENSE](http://img.shields.io/npm/l/rerun-script.svg)](LICENSE)
 
-> Via package.json, configure glob patterns to watch and invoke an `npm run` script on change.
+> Invoke npm scripts upon file changes. Configure via package.json using glob patterns.
 
-![](https://cloudup.com/cJYbv0puHkE+)
+    $ npm install rerun-script --save-dev
 
-    $ npm install watch-and-run --save-dev
+## usage
 
-## package.json configuration
+    Usage: rerun-script [options]
 
-###### watches
+    Options:
+
+      -h, --help                   output usage information
+      -V, --version                output the version number
+      -d, --directory [directory]  package directory
+
+## example
+
+    % ./node_modules/.bin/rerun-script
+
+## package.json
 
     {
+      "test": "tape test.js | faucet",
+      "lint": "eslint",
+
       "watches": [
         {
           "script": "test",
@@ -25,25 +38,9 @@
       ]
     }
 
-## starting the watcher
+## screenshot
 
-###### via npm run script
-
-    {
-      "scripts": {
-        "watch": "watch-and-run",
-        "test": "tape test.js | faucet",
-        "lint": "eslint"
-      }
-    }
-
-```shell
-% npm run watch
-```
-
-###### directly
-
-    % ./node_modules/.bin/watch-and-run
+![](https://cloudup.com/cJYbv0puHkE+)
 
 ## License
 

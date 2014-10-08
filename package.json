@@ -1,10 +1,10 @@
 {
-  "name": "watch-and-run",
+  "name": "rerun-script",
   "version": "0.1.0",
-  "description": "Via package.json, configure glob patterns to watch and invoke an `npm run` script on change.",
+  "description": "Invoke npm scripts upon file changes. Configure via package.json using glob patterns.",
   "main": "index.js",
   "bin": {
-    "watch-and-run": "bin/cli.js"
+    "rerun-script": "bin/rerun-script"
   },
   "scripts": {
     "test": "tape test.js | faucet"

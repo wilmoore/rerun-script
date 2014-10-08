@@ -16,7 +16,7 @@ program.version(version());
 
 // options.
 
-program.option('-d, --directory [directory]', 'Package Directory');
+program.option('-d, --directory [directory]', 'package directory');
 
 // parse options.
 
@@ -25,7 +25,12 @@ debug('directory: %s', program.directory);
 
 // get watches.
 
-var watches = getWatches(program.directory);
+try {
+  var watches = getWatches(program.directory);
+} catch (e) {
+  console.error('%s..Aborting!', e.message);
+  process.exit(1);
+}
 
 // validate watches.
 

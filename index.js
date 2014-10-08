@@ -29,7 +29,12 @@ function resolve(directory) {
 }
 
 function read(package_path) {
-  var pkg = require(package_path);
+  try {
+    var pkg = require(package_path);
+  } catch (e) {
+    throw new Error(package_path + ' does not exist.');
+  }
+
   debug('package.json contents: %s', JSON.stringify(pkg));
   return pkg;
 }
