@@ -1,6 +1,6 @@
 {
   "name": "watch-and-run",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Via package.json, configure glob patterns to watch and invoke an `npm run` script on change.",
   "main": "index.js",
   "bin": {
@@ -27,7 +27,18 @@
       ]
     }
   ],
-  "keywords": ["glob", "watch", "run command", "command", "run", "re-execute", "run-script", "npm run", "npm run-script", "filewatcher"],
+  "keywords": [
+    "glob",
+    "watch",
+    "run command",
+    "command",
+    "run",
+    "re-execute",
+    "run-script",
+    "npm run",
+    "npm run-script",
+    "filewatcher"
+  ],
   "author": "Wil Moore III <wil.moore@wilmoore.com>",
   "license": "MIT",
   "dependencies": {
