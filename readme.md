@@ -1,6 +1,6 @@
 # rerun-script
 
-[![Build Status](http://img.shields.io/travis/wilmoore/rerun-script.svg)](https://travis-ci.org/wilmoore/rerun-script) [![NPM version](http://img.shields.io/npm/v/rerun-script.svg)](https://www.npmjs.org/package/rerun-script) [![NPM downloads](http://img.shields.io/npm/dm/rerun-script.svg)](https://www.npmjs.org/package/rerun-script) [![LICENSE](http://img.shields.io/npm/l/rerun-script.svg)](LICENSE)
+[![Build Status](http://img.shields.io/travis/wilmoore/rerun-script.svg)](https://travis-ci.org/wilmoore/rerun-script) [![NPM version](http://img.shields.io/npm/v/rerun-script.svg)](https://www.npmjs.org/package/rerun-script) [![NPM downloads](http://img.shields.io/npm/dm/rerun-script.svg)](https://www.npmjs.org/package/rerun-script) [![LICENSE](http://img.shields.io/npm/l/rerun-script.svg)](license)
 
 > Invoke npm scripts upon file changes. Configure via package.json using glob patterns.
 
@@ -44,5 +44,5 @@
 
 ## License
 
-  [MIT](LICENSE)
+  [MIT](license)
 
