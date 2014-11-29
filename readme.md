@@ -23,19 +23,22 @@
 ## package.json
 
     {
-      "test": "tape test.js | faucet",
-      "lint": "eslint",
-
-      "watches": [
-        {
-          "script": "test",
-          "patterns": [ "*.js", "lib/**/*.js", "test/**/*.js" ]
+        "scripts": {
+            "test": "node test.js",
+            "lint": "eslint",
+            "watch": "rerun-script"
         },
-        {
-          "script": "lint",
-          "patterns": [ "*.js", "lib/**/*.js", "test/**/*.js" ]
-        }
-      ]
+
+        "watches": [
+            {
+                "script": "test",
+                "patterns": [ "*.js", "lib/**/*.js", "test/**/*.js" ]
+            },
+            {
+                "script": "lint",
+                "patterns": [ "*.js", "lib/**/*.js", "test/**/*.js" ]
+            }
+        ]
     }
 
 ## screenshot
