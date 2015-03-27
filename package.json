@@ -46,7 +46,7 @@
   "author": "Wil Moore III <wil.moore@wilmoore.com>",
   "license": "MIT",
   "dependencies": {
-    "chalk": "^0.5.1",
+    "chalk": "^1.0.0",
     "commander": "^2.3.0",
     "debug": "^2.0.0",
     "program-version": "^0.1.1",
