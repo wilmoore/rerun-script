@@ -18,8 +18,8 @@
 
 ## configure package.json
 
-**NOTE** 1: While the examples below use the [standard] lint checker, you are free to use any lint checker you like.
-**NOTE** 2: The `watch` script in `package.json` is optional and is only necessary if you plan to invoke `rerun-script` via `npm run`. You can use any script name you like.
+- **NOTE** 1: While the examples below use the [standard] lint checker, you are free to use any lint checker you like.
+- **NOTE** 2: The `watch` script in `package.json` is optional and is only necessary if you plan to invoke `rerun-script` via `npm run`. You can use any script name you like.
 
 ### `package.json`
 
