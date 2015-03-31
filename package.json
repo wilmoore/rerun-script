@@ -1,6 +1,6 @@
 {
   "name": "rerun-script",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "Invoke npm scripts upon file changes. Configure via package.json using glob patterns.",
   "main": "index.js",
   "bin": {
@@ -12,27 +12,17 @@
     "test": "tape test.js | tap-spec",
     "watch": "bin/rerun-script"
   },
-  "watches": [
-    {
-      "script": "test",
-      "patterns": [
-        "*.js",
-        "lib/**/*.js",
-        "test/**/*.js"
-      ]
-    },
-    {
-      "script": "lint",
-      "patterns": [
-        "*.js",
-        "lib/**/*.js",
-        "test/**/*.js"
-      ]
-    }
-  ],
   "watches": {
-      "test": [ "*.js", "lib/**/*.js", "test/**/*.js" ],
-      "lint": [ "*.js", "lib/**/*.js", "test/**/*.js" ]
+    "test": [
+      "*.js",
+      "lib/**/*.js",
+      "test/**/*.js"
+    ],
+    "lint": [
+      "*.js",
+      "lib/**/*.js",
+      "test/**/*.js"
+    ]
   },
   "keywords": [
     "glob",
