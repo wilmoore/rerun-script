@@ -40,7 +40,17 @@ function read(package_path) {
 }
 
 function extract(pkg) {
-  var watches = pkg.watches;
+  var watches;
+  if (Array.isArray(pkg.watches)) {
+    watches = pkg.watches;
+  } else {
+    watches = Object.keys(pkg.watches).map(function (key) {
+      return {
+        "script": key,
+        "patterns": pkg.watches[key]
+      };
+    });
+  }
   debug('watches list: %s', JSON.stringify(watches));
   return watches;
 }
