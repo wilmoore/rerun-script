@@ -6,7 +6,7 @@
  */
 
 var chalk = require('chalk');
-var debug = require('debug')('watch-and-run:cli');
+var debug = require('debug')('rerun-script:cli');
 var getWatches = require('../');
 var path = require('path');
 var program = require('commander');
