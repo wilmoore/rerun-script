@@ -1,14 +1,18 @@
 #!/usr/bin/env node
 'use strict';
 
-var program = require('commander');
-var version = require('program-version');
-var watcher = require('watch-glob');
-var shell = require('shelljs');
-var path = require('path');
+/*!
+ * imports.
+ */
+
 var chalk = require('chalk');
 var debug = require('debug')('watch-and-run:cli');
 var getWatches = require('../');
+var path = require('path');
+var program = require('commander');
+var shell = require('shelljs');
+var version = require('program-version');
+var watcher = require('watch-glob');
 
 // version.
 

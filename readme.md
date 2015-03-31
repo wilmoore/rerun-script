@@ -1,6 +1,6 @@
 # rerun-script
 
-[![Build Status](http://img.shields.io/travis/wilmoore/rerun-script.svg)](https://travis-ci.org/wilmoore/rerun-script) [![NPM version](http://img.shields.io/npm/v/rerun-script.svg)](https://www.npmjs.org/package/rerun-script) [![NPM downloads](http://img.shields.io/npm/dm/rerun-script.svg)](https://www.npmjs.org/package/rerun-script) [![LICENSE](http://img.shields.io/npm/l/rerun-script.svg)](license)
+[![Build Status](http://img.shields.io/travis/wilmoore/rerun-script.svg)](https://travis-ci.org/wilmoore/rerun-script) [![NPM version](http://img.shields.io/npm/v/rerun-script.svg)](https://www.npmjs.org/package/rerun-script) [![NPM downloads](http://img.shields.io/npm/dm/rerun-script.svg)](https://www.npmjs.org/package/rerun-script) [![LICENSE](http://img.shields.io/npm/l/rerun-script.svg)](license) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/feross/standard)
 
 > Invoke npm scripts upon file changes. Configure via `package.json` using glob patterns.
 
@@ -16,16 +16,34 @@
       -V, --version                output the version number
       -d, --directory [directory]  package directory
 
-## example
+## configure package.json
 
-    % ./node_modules/.bin/rerun-script
+**NOTE** 1: While the examples below use the [standard] lint checker, you are free to use any lint checker you like.
+**NOTE** 2: The `watch` script in `package.json` is optional and is only necessary if you plan to invoke `rerun-script` via `npm run`. You can use any script name you like.
 
-## package.json
+### `package.json`
+
+###### compact (recommended) format:
 
     {
         "scripts": {
             "test": "node test.js",
-            "lint": "eslint",
+            "lint": "standard",
+            "watch": "rerun-script"
+        },
+
+        "watches": {
+            "test": [ "*.js", "lib/**/*.js", "test/**/*.js" ],
+            "lint": [ "*.js", "lib/**/*.js", "test/**/*.js" ]
+        }
+    }
+
+###### verbose format:
+
+    {
+        "scripts": {
+            "test": "node test.js",
+            "lint": "standard",
             "watch": "rerun-script"
         },
 
@@ -41,20 +59,13 @@
         ]
     }
 
-You can also use a more compact format for watches:
+## start the watcher
 
-    {
-        "scripts": {
-            "test": "node test.js",
-            "lint": "eslint",
-            "watch": "rerun-script"
-        },
+    # directly
+    $ ./node_modules/.bin/rerun-script
 
-        "watches": {
-            "test": [ "*.js", "lib/**/*.js", "test/**/*.js" ],
-            "lint": [ "*.js", "lib/**/*.js", "test/**/*.js" ]
-        }
-    }
+    # or via `npm run watch`
+    $ npm run watch
 
 ## screenshot
 
@@ -64,3 +75,4 @@ You can also use a more compact format for watches:
 
   [MIT](license)
 
+[standard]: https://github.com/feross/standard

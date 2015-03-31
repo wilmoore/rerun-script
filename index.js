@@ -1,9 +1,17 @@
-'use strict';
+'use strict'
 
-var path = require('path');
-var debug = require('debug')('watch-and-run:index');
+/*!
+ * imports.
+ */
 
-module.exports = getWatches;
+var debug = require('debug')('rerun-script:index')
+var path = require('path')
+
+/*!
+ * exports.
+ */
+
+module.exports = getWatches
 
 /**
  * Get package watches.
@@ -15,42 +23,42 @@ module.exports = getWatches;
  * Array of watches.
  */
 
-function getWatches(directory) {
-  var package_path = resolve(directory || './');
-  var pkg = read(package_path);
-  var watches = extract(pkg);
-  return Array.isArray(watches) ? watches : [];
+function getWatches (directory) {
+  var package_path = resolve(directory || './')
+  var pkg = read(package_path)
+  var watches = extract(pkg)
+  return Array.isArray(watches) ? watches : []
 }
 
-function resolve(directory) {
-  var package_path = path.resolve(directory, 'package.json');
-  debug('package.json path: %s', package_path);
-  return package_path;
+function resolve (directory) {
+  var package_path = path.resolve(directory, 'package.json')
+  debug('package.json path: %s', package_path)
+  return package_path
 }
 
-function read(package_path) {
+function read (package_path) {
   try {
-    var pkg = require(package_path);
+    var pkg = require(package_path)
   } catch (e) {
-    throw new Error(package_path + ' does not exist.');
+    throw new Error(package_path + ' does not exist.')
   }
 
-  debug('package.json contents: %s', JSON.stringify(pkg));
-  return pkg;
+  debug('package.json contents: %s', JSON.stringify(pkg))
+  return pkg
 }
 
-function extract(pkg) {
-  var watches;
+function extract (pkg) {
+  var watches
   if (Array.isArray(pkg.watches)) {
-    watches = pkg.watches;
+    watches = pkg.watches
   } else {
     watches = Object.keys(pkg.watches).map(function (key) {
       return {
-        "script": key,
-        "patterns": pkg.watches[key]
-      };
-    });
+        'script': key,
+        'patterns': pkg.watches[key]
+      }
+    })
   }
-  debug('watches list: %s', JSON.stringify(watches));
-  return watches;
+  debug('watches list: %s', JSON.stringify(watches))
+  return watches
 }
