@@ -69,7 +69,7 @@
 
 ## screenshot
 
-![](https://cloudup.com/cJYbv0puHkE+)
+![](https://cloudup.com/c6iu6nW6gm2+)
 
 ## License
 
