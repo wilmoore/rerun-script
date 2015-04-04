@@ -59,6 +59,12 @@ function extract (pkg) {
       }
     })
   }
+  watches = watches.map(function (watch) {
+    if (!Array.isArray(watch.patterns)) {
+      watch.patterns = [watch.patterns]
+    }
+    return watch
+  })
   debug('watches list: %s', JSON.stringify(watches))
   return watches
 }

@@ -59,6 +59,22 @@
         ]
     }
 
+If you only have one pattern to match for a script, you can pass in a string instead of an array:
+
+
+    {
+        "scripts": {
+            "test": "node test.js",
+            "lint": "standard",
+            "watch": "rerun-script"
+        },
+
+        "watches": {
+            "test": "test/**/*.js",
+            "lint": "*.js"
+        }
+    }
+
 ## start the watcher
 
     # directly
