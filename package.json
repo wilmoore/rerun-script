@@ -1,6 +1,6 @@
 {
   "name": "rerun-script",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "description": "Invoke npm scripts upon file changes. Configure via package.json using glob patterns.",
   "main": "index.js",
   "bin": {
