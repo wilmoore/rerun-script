@@ -21,6 +21,7 @@ program.version(version());
 // options.
 
 program.option('-d, --directory [directory]', 'package directory');
+program.option('-a, --automatic', 'run script automatically');
 
 // parse options.
 
@@ -62,6 +63,10 @@ watches.forEach(function (watch) {
   watcher(watch.patterns, function() {
     shell.exec('npm run ' + watch.script);
   });
+
+  if (program.automatic) {
+    shell.exec('npm run '+ watch.script);
+  }
 });
 
 shell.echo(chalk.cyan("... To quit, enter CTRL+C  ..."));
