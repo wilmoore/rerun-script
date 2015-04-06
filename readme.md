@@ -12,6 +12,7 @@
 
     Options:
 
+      -a, --automatic              run tests automatically
       -h, --help                   output usage information
       -V, --version                output the version number
       -d, --directory [directory]  package directory
